@@ -1,3 +1,7 @@
 site_name: Hololens 2 Demo Documentation
 theme:
   name: material
+  palette:
+    primary: green
+    accent: light green
+docs_dir: temp_docs

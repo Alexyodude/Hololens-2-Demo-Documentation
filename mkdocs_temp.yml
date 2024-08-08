@@ -1,0 +1,6 @@
+
+site_name: My Obsidian Notes
+theme:
+  name: material
+docs_dir: temp_docs
+    
