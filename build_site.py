@@ -10,9 +10,12 @@ site_dir = 'site'
 
 def create_temp_mkdocs_config():
     mkdocs_config_content = """
-site_name: My Obsidian Notes
+site_name: Hololens 2 Demo Documentation
 theme:
   name: material
+  palette:
+    primary: green
+    accent: light green
 docs_dir: temp_docs
     """
     with open(mkdocs_temp_file, 'w', encoding='utf-8') as file:
