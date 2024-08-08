@@ -1,28 +1,33 @@
 import os
 import re
+import shutil
 
 # Directory containing the markdown files
 docs_dir = 'docs'
+temp_docs_dir = 'temp_docs'
 
 # Regular expression to find [[wikilinks]]
 wikilink_pattern = re.compile(r'\[\[([^\]]+)\]\]')
 
-def convert_wikilinks(filepath):
-    with open(filepath, 'r', encoding='utf-8') as file:
-        content = file.read()
-
+def convert_wikilinks(content):
     # Replace [[wikilink]] with [wikilink](wikilink.md)
-    converted_content = wikilink_pattern.sub(r'[\1](\1.md)', content)
+    return wikilink_pattern.sub(r'[\1](\1.md)', content)
 
-    with open(filepath, 'w', encoding='utf-8') as file:
-        file.write(converted_content)
-
-def convert_all_wikilinks(directory):
-    for root, _, files in os.walk(directory):
+def copy_and_convert_files(src, dst):
+    if os.path.exists(dst):
+        shutil.rmtree(dst)
+    shutil.copytree(src, dst)
+    
+    for root, _, files in os.walk(dst):
         for filename in files:
             if filename.endswith('.md'):
-                convert_wikilinks(os.path.join(root, filename))
+                filepath = os.path.join(root, filename)
+                with open(filepath, 'r', encoding='utf-8') as file:
+                    content = file.read()
+                converted_content = convert_wikilinks(content)
+                with open(filepath, 'w', encoding='utf-8') as file:
+                    file.write(converted_content)
 
 if __name__ == '__main__':
-    convert_all_wikilinks(docs_dir)
-    print("Conversion completed.")
+    copy_and_convert_files(docs_dir, temp_docs_dir)
+    print("Files copied and links converted.")

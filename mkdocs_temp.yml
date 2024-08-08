@@ -1,0 +1,4 @@
+site_name: Hololens 2 Demo Documentation
+theme:
+  name: material
+docs_dir: temp_docs
