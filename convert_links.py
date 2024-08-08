@@ -9,9 +9,14 @@ temp_docs_dir = 'temp_docs'
 # Regular expression to find [[wikilinks]]
 wikilink_pattern = re.compile(r'\[\[([^\]]+)\]\]')
 
-def convert_wikilinks(content):
-    # Replace [[wikilink]] with [wikilink](wikilink.md)
-    return wikilink_pattern.sub(r'[\1](\1.md)', content)
+def convert_wikilinks(content, current_path):
+    def replacer(match):
+        link = match.group(1)
+        link_path = os.path.join(current_path, link)
+        link_relative_path = os.path.relpath(link_path, docs_dir)
+        return f'[{link}]({link_relative_path})'
+
+    return wikilink_pattern.sub(replacer, content)
 
 def copy_and_convert_files(src, dst):
     if os.path.exists(dst):
@@ -24,7 +29,8 @@ def copy_and_convert_files(src, dst):
                 filepath = os.path.join(root, filename)
                 with open(filepath, 'r', encoding='utf-8') as file:
                     content = file.read()
-                converted_content = convert_wikilinks(content)
+                # Convert wikilinks considering the current file path
+                converted_content = convert_wikilinks(content, root)
                 with open(filepath, 'w', encoding='utf-8') as file:
                     file.write(converted_content)
 
