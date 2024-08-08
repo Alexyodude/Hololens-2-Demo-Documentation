@@ -1,0 +1,1 @@
+A script is programmed in C# and it can control the state of the game from the game.

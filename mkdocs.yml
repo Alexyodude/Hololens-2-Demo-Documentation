@@ -1,7 +1,26 @@
+docs_dir: docs
+nav:
+- Index: index.md
+- Unity:
+  - Application Description: Unity/Application Description.md
+  - Prefab: Unity/Prefab.md
+  - Scripts: Unity/Scripts.md
+  - Setting Up The Enviorment: Unity/Setting Up the Enviorment.md
+- Enemy Component Scripts:
+  - Animator: Unity/Enemy Component Scripts/Animator.md
+  - Character Controller: Unity/Enemy Component Scripts/Character Controller.md
+  - Enemy Collision Handler: Unity/Enemy Component Scripts/Enemy Collision Handler.md
+  - Enemy State: Unity/Enemy Component Scripts/Enemy State.md
+  - Parent Rigid Controller: Unity/Enemy Component Scripts/Parent Rigid Controller.md
+  - Random Movement: Unity/Enemy Component Scripts/Random Movement.md
+- Ui:
+  - Toggle Drone: Unity/UI/Toggle Drone.md
+  - Toggle Enemy: Unity/UI/Toggle Enemy.md
+  - Toggle Mesh: Unity/UI/Toggle Mesh.md
+  - Toggle Pistol: Unity/UI/Toggle Pistol.md
 site_name: Hololens 2 Demo Documentation
 theme:
   name: material
   palette:
-    primary: green
     accent: light green
-docs_dir: temp_docs
+    primary: green

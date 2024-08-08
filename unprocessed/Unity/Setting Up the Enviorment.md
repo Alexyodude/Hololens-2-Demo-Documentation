@@ -9,4 +9,4 @@ Inside the Hololens 2 open the App named "Holographic Remoting". Type the ip add
 
 This should setup the Hololens 2 to be play tested. 
 
-[Application Description](../Application Description)
+[[Application Description]]

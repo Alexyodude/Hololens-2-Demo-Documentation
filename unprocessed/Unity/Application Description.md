@@ -4,7 +4,7 @@ The user enters the application:
 ![[Pasted image 20240807150758.png]]
 A UI(User interface) that follows the user's head 
 		It contains toggle and press buttons
-			The toggle buttons are [Toggle Drone](../UI/Toggle Drone), [Toggle Pistol](../UI/Toggle Pistol), [Toggle Mesh](../UI/Toggle Mesh), and [Toggle Enemy](../UI/Toggle Enemy)12.
+			The toggle buttons are [[Toggle Drone]], [[Toggle Pistol]], [[Toggle Mesh]], and [[Toggle Enemy]]12.
 The UI can be pinned in space so it stops following the user around. In addition this UI panel can be resized or moved around in space with hand gestures.
 
 There is an empty object which contains the scripts to instantiate the GameObjects. The object is attached to the corresponding UI component.
