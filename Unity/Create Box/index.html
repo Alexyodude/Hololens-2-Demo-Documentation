@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../..">
-      
-      
-        <link rel="next" href="../Component/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Application Description - Hololens 2 Demo Documentation</title>
+        <title>Create Box - Hololens 2 Demo Documentation</title>
       
     
     
@@ -103,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Application Description
+              Create Box
             
           </span>
         </div>
@@ -213,19 +209,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -239,7 +233,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Unity
@@ -250,17 +244,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Application%20Description/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -269,7 +256,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -712,14 +698,60 @@
                   
 
 
-  <h1>Application Description</h1>
+  <h1>Create Box</h1>
 
-<p>The user enters the application:</p>
-<p>(There may be a prompt saying that the user has to calibrate the device)
-<img alt="" src="../Images/Pasted image 20240807150758.png" />
-The user is met with a UI(User interface) that follows the user's head. It contains toggle and press buttons. The toggle buttons are [[UI/Toggle Drone]], <a href="../UI/Toggle Pistol">Toggle Pistol</a>, [[UI/Toggle Mesh]], and [[UI/Toggle Enemy]].
-The UI can be pinned in space so it stops following the user around. In addition this UI panel can be resized or moved around in space with hand gestures.</p>
-<p>There is an [[empty object named scripts]] which contains the scripts to instantiate the <a href="../GameObjects">GameObjects</a>.</p>
+<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
+
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CreateBox</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Rigidbody</span><span class="w"> </span><span class="n">box</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">GameObject</span><span class="w"> </span><span class="n">location</span><span class="p">;</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Rigidbody</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Rigidbody</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MakeBox</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Instantiate</span><span class="p">(</span><span class="n">box</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">list</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">box</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">-</span><span class="m">10</span><span class="p">)</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Destroy</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">gameObject</span><span class="p">);</span>
+<span class="w">                </span><span class="n">list</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 
 
 
