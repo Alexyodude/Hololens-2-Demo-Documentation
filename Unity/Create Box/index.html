@@ -928,33 +928,83 @@
 <span class="normal">23</span>
 <span class="normal">24</span>
 <span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
-<span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the System.Collections.Generic namespace for using the List class</span>
+<span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span><span class="w"> </span><span class="c1">// Import the UnityEngine namespace to access Unity-specific classes and methods</span>
 
 <span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">CreateBox</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Rigidbody</span><span class="w"> </span><span class="n">box</span><span class="p">;</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">GameObject</span><span class="w"> </span><span class="n">location</span><span class="p">;</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Vector3</span><span class="w"> </span><span class="n">position</span><span class="p">;</span>
-<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Rigidbody</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Rigidbody</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">// Public variables allow for easy assignment in the Unity Inspector</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">Rigidbody</span><span class="w"> </span><span class="n">box</span><span class="p">;</span><span class="w"> </span><span class="c1">// Reference to the Rigidbody component that will be instantiated as a box. A prefab object was used.</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">GameObject</span><span class="w"> </span><span class="n">location</span><span class="p">;</span><span class="w"> </span><span class="c1">// Reference to the GameObject representing the location where boxes will be instantiated</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Rigidbody</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Rigidbody</span><span class="o">&gt;</span><span class="p">();</span><span class="w"> </span><span class="c1">// Private list to keep track of instantiated Rigidbody boxes</span>
+
+<span class="w">    </span><span class="c1">// Method to instantiate a box and add it to the list</span>
 <span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MakeBox</span><span class="p">()</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Instantiate</span><span class="p">(</span><span class="n">box</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">));</span>
+<span class="w">        </span><span class="c1">// Instantiate a new box at the location&#39;s position with the object&#39;s rotation</span>
+<span class="w">        </span><span class="n">Rigidbody</span><span class="w"> </span><span class="n">newBox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Instantiate</span><span class="p">(</span><span class="n">box</span><span class="p">,</span><span class="w"> </span><span class="n">location</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Add the new box to the list for tracking</span>
+<span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">newBox</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
+<span class="w">    </span><span class="c1">// Update is called once per frame</span>
 <span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span>
 <span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Use a temporary list to store items to be removed to avoid modifying the list during iteration</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Rigidbody</span><span class="o">&gt;</span><span class="w"> </span><span class="n">itemsToRemove</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Rigidbody</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Iterate over the list of boxes</span>
 <span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">list</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">box</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">-</span><span class="m">10</span><span class="p">)</span>
+<span class="w">            </span><span class="c1">// Check if the box&#39;s y position is below -10</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">-</span><span class="m">10</span><span class="p">)</span>
 <span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="n">Destroy</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">gameObject</span><span class="p">);</span>
-<span class="w">                </span><span class="n">list</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+<span class="w">                </span><span class="c1">// Mark the box for removal</span>
+<span class="w">                </span><span class="n">itemsToRemove</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
 <span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// Remove the marked boxes from the list and destroy their game objects</span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">itemsToRemove</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Destroy the game object associated with the Rigidbody</span>
+<span class="w">            </span><span class="n">Destroy</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">gameObject</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// Remove the Rigidbody from the list</span>
+<span class="w">            </span><span class="n">list</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
+
+<span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+
+<p>The first import is for the List class and the second import is for the classes and methods used in unity such as Rigidbody and MonoBehaviour.
+MonoBehaviour contains lifecycle methods such as Update() used in this [[script]]. For more detail look into <a href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">Unity - Scripting API: MonoBehaviour (unity3d.com)</a>. </p>
+<p>Public variables are declared to take in inputs from the unity scene and assets. A private list contains a list of box objects that were instantiated. </p>
+<p>The method "public void MakeBox()" instantiates and adds the object to the private list. In each Update() cycle the list of boxes are checked if it left the boundary that was set. If it does then it calls the Destory() method and removes the object that left the boundary from the list.</p>
+<p>The [[prefab]] contains a rigidbody and object manipulator component.</p>
 
 
 
