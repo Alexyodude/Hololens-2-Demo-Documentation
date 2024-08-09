@@ -1,5 +1,0 @@
-/* Ensure code blocks maintain tab spacing */
-code, pre {
-    white-space: pre-wrap;
-    tab-size: 4; /* or whatever tab size you prefer */
-}
