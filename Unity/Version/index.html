@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../Empty%20Object/">
-      
-      
-        <link rel="next" href="../Script/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Prefab - Hololens 2 Demo Documentation</title>
+        <title>Version - Hololens 2 Demo Documentation</title>
       
     
     
@@ -71,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#possible-ideas-to-improve" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -103,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Prefab
+              Version
             
           </span>
         </div>
@@ -213,19 +214,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -239,7 +238,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Unity
@@ -355,17 +354,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Prefab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -374,7 +366,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -804,6 +795,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#possible-ideas-to-improve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Possible Ideas to Improve
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 0.1
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -817,10 +834,36 @@
                   
 
 
-  <h1>Prefab</h1>
+  <h1>Version</h1>
 
-<p>A prefab is a blueprint object, this means that when editing this object the changes will be applied to every instance of this object being used elsewhere.</p>
-<p>The use of this capability is an efficient way to make changes across the entire project without having to make repetitive manual changes across objects.</p>
+<h3 id="possible-ideas-to-improve">Possible Ideas to Improve<a class="headerlink" href="#possible-ideas-to-improve" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Upgrade <a href="../Enemy Scripts/Random Movement">Random Movement</a> script to a neural ai script that navigates the world intelligently</li>
+<li>Upgrade <a href="../Drone Scripts/Drone Boid">Drone Boid</a> script to an ai script that targets enemies better and follows the user input smoothly</li>
+<li>Include a minimap for the user, which conveys key information about the surrounding environment in a clear and simple format</li>
+<li>Physical external input from a device such as a model gun to improve experience and immersion</li>
+</ul>
+<h3 id="version-01">Version 0.1<a class="headerlink" href="#version-01" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../Images/Pasted image 20240807150758.png" />
+- UI with toggle and press buttons:
+    - - <a href="../UI/Create Box">Create Box</a>
+    - - <a href="../Enemy Scripts/Toggle Enemy">Toggle Enemy</a>
+    - - <a href="../Drone Scripts/Toggle Drone">Toggle Drone</a>
+    - - <a href="../Pistol/Toggle Pistol">Toggle Pistol</a>
+    - - <a href="../UI/Toggle Mesh">Toggle Mesh</a>
+- Box creation and destruction based on set boundary
+- Enemies and drones are set before as public variables so it is constant
+- Enemies spawn randomly on meshes with a normal vector roughly pointing up
+- Enemies move in straight lines unless it collides with a mesh (<a href="../Enemy Scripts/Random Movement">Random Movement</a>)
+    - - Colliding results in a random direction to be selected
+    - - Enemies respawn if they leave the set boundary
+    - - Custom tag "Enemy" selected to differentiate object when collision is detected with another object
+- Drones move towards the user's ray pointer
+    - - Separation between the drones are provided by <a href="../Drone Scripts/Drone Boid">Drone Boid</a> script
+    - - Custom tag "Destroy" selected to differentiate object when collision is detected with another object
+- Mesh visibility changes between visible and <a href="../Occlusion">Occlusion</a>
+- The pistol's relative position and orientation is used to instantiate the bullet
+    - - Bullet has custom tag "Destroy" selected for enemy and weapon collision logic</p>
 
 
 
