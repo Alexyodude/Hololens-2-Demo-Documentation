@@ -1504,18 +1504,13 @@
 </ul>
 <h2 id="toggleenemy-class-explanation"><code>ToggleEnemy</code> Class Explanation<a class="headerlink" href="#toggleenemy-class-explanation" title="Permanent link">&para;</a></h2>
 <h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.MixedReality.Toolkit.SpatialAwareness</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.MixedReality.Toolkit.SpatialAwareness</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.MixedReality.Toolkit</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong><code>using Microsoft.MixedReality.Toolkit.SpatialAwareness;</code></strong>: Provides access to spatial awareness features in the Microsoft Mixed Reality Toolkit (MRTK).</li>
@@ -1526,8 +1521,8 @@
 <li><strong><code>using System;</code></strong>: Provides basic data types and functions.</li>
 </ul>
 <h3 id="class-definition">Class Definition<a class="headerlink" href="#class-definition" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ToggleEnemy</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ToggleEnemy</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>public</code></strong>: Allows the class to be accessible from other scripts and Unity's Inspector.</li>
@@ -1549,17 +1544,7 @@
 <li><strong><code>public Boolean enemySpawn = true;</code></strong>: Boolean flag to control whether enemies should be spawned.</li>
 </ul>
 <h3 id="start-method"><code>Start</code> Method<a class="headerlink" href="#start-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">spatialAwarenessService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CoreServices</span><span class="p">.</span><span class="n">SpatialAwarenessSystem</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">dataProviderAccess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spatialAwarenessService</span><span class="w"> </span><span class="k">as</span><span class="w">      </span><span class="n">IMixedRealityDataProviderAccess</span><span class="p">;</span>
@@ -1570,7 +1555,7 @@
 <span class="w">        </span><span class="k">return</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Initializes the spatial awareness mesh observer.</li>
@@ -1578,28 +1563,7 @@
 <li><strong>Error Handling</strong>: Logs an error if the mesh observer cannot be obtained.</li>
 </ul>
 <h3 id="update-method"><code>Update</code> Method<a class="headerlink" href="#update-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">enemySpawn</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
@@ -1621,7 +1585,7 @@
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Manages enemy spawning and checks for fallen enemies.</li>
@@ -1629,88 +1593,27 @@
 <li><strong>Enemy Removal</strong>: Removes all enemies if <code>enemySpawn</code> is <code>false</code>.</li>
 </ul>
 <h3 id="enemyspawnon-method"><code>EnemySpawnOn</code> Method<a class="headerlink" href="#enemyspawnon-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnemySpawnOn</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnemySpawnOn</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">enemySpawn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Enables enemy spawning by setting <code>enemySpawn</code> to <code>true</code>.</li>
 </ul>
 <h3 id="enemyspawnoff-method"><code>EnemySpawnOff</code> Method<a class="headerlink" href="#enemyspawnoff-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnemySpawnOn</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnemySpawnOn</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">enemySpawn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Disables enemy spawning by setting <code>enemySpawn</code> to <code>false</code>.</li>
 </ul>
 <h3 id="randommeshnormalcheck-method"><code>RandomMeshNormalCheck</code> Method<a class="headerlink" href="#randommeshnormalcheck-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">RandomMeshNormalCheck</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">RandomMeshNormalCheck</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">meshes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">observer</span><span class="p">.</span><span class="n">Meshes</span><span class="p">.</span><span class="n">Values</span><span class="p">;</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">meshes</span><span class="p">.</span><span class="n">Any</span><span class="p">())</span>
@@ -1766,7 +1669,7 @@
 <span class="w">    </span><span class="n">GameObject</span><span class="w"> </span><span class="n">enemyInstance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Instantiate</span><span class="p">(</span><span class="n">EnemyPrefab</span><span class="p">,</span><span class="w"> </span><span class="n">offSetWorldPosition</span><span class="p">,</span><span class="w"> </span><span class="n">transform</span><span class="p">.</span><span class="n">rotation</span><span class="p">,</span><span class="w"> </span><span class="n">Parent</span><span class="p">);</span>
 <span class="w">    </span><span class="n">numberEnemies</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">enemyInstance</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Spawns enemies at random positions on the floor of randomly selected meshes.</li>
@@ -1775,30 +1678,18 @@
 <li><strong>Instantiation</strong>: Creates and positions the enemy GameObject in the scene.</li>
 </ul>
 <h3 id="removeenemy-method"><code>RemoveEnemy</code> Method<a class="headerlink" href="#removeenemy-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">RemoveEnemy</span><span class="p">(</span><span class="n">GameObject</span><span class="w"> </span><span class="n">enemy</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">RemoveEnemy</span><span class="p">(</span><span class="n">GameObject</span><span class="w"> </span><span class="n">enemy</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">numberEnemies</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">enemy</span><span class="p">);</span>
 <span class="w">    </span><span class="n">Destroy</span><span class="p">(</span><span class="n">enemy</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Removes an enemy from the list and destroys the GameObject.</li>
 </ul>
 <h3 id="enterragdollstate-method"><code>EnterRagdollState</code> Method<a class="headerlink" href="#enterragdollstate-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnterRagdollState</span><span class="p">(</span><span class="n">GameObject</span><span class="w"> </span><span class="n">enemy</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnterRagdollState</span><span class="p">(</span><span class="n">GameObject</span><span class="w"> </span><span class="n">enemy</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">Animator</span><span class="w"> </span><span class="n">animator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enemy</span><span class="p">.</span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">Animator</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="w">    </span><span class="n">StarterAssets</span><span class="p">.</span><span class="n">RandomMovement</span><span class="w"> </span><span class="n">randomMovement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">enemy</span><span class="p">.</span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">StarterAssets</span><span class="p">.</span><span class="n">RandomMovement</span><span class="o">&gt;</span><span class="p">();</span>
@@ -1807,7 +1698,7 @@
 <span class="w">    </span><span class="n">randomMovement</span><span class="p">.</span><span class="n">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
 <span class="w">    </span><span class="n">StartCoroutine</span><span class="p">(</span><span class="n">DestroyAfterDelay</span><span class="p">(</span><span class="n">enemy</span><span class="p">,</span><span class="w"> </span><span class="m">5f</span><span class="p">));</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Switches an enemy to a ragdoll state by disabling its <code>Animator</code> and movement scripts, then schedules destruction.</li>
@@ -1815,57 +1706,38 @@
 <li><strong>Destruction</strong>: Calls <code>DestroyAfterDelay</code> coroutine to remove the enemy after a delay.</li>
 </ul>
 <h3 id="destroyafterdelay-method"><code>DestroyAfterDelay</code> Method<a class="headerlink" href="#destroyafterdelay-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">IEnumerator</span><span class="w"> </span><span class="n">DestroyAfterDelay</span><span class="p">(</span><span class="n">GameObject</span><span class="w"> </span><span class="n">enemy</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">delay</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">IEnumerator</span><span class="w"> </span><span class="n">DestroyAfterDelay</span><span class="p">(</span><span class="n">GameObject</span><span class="w"> </span><span class="n">enemy</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">delay</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">WaitForSeconds</span><span class="p">(</span><span class="n">delay</span><span class="p">);</span>
 <span class="w">    </span><span class="n">RemoveEnemy</span><span class="p">(</span><span class="n">enemy</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Coroutine to wait for a specified delay before removing the enemy from the scene.</li>
 </ul>
 <h3 id="enemykilled-method"><code>EnemyKilled</code> Method<a class="headerlink" href="#enemykilled-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnemyKilled</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">EnemyKilled</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">killCount</span><span class="o">++</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Increments the kill count when an enemy is killed.</li>
 </ul>
 <h3 id="getkillcount-property"><code>getKillCount</code> Property<a class="headerlink" href="#getkillcount-property" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">getKillCount</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">getKillCount</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">killCount</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Provides read-only access to the current kill count.</li>
 </ul>
 <h3 id="checkfallenenemies-method"><code>CheckFallenEnemies</code> Method<a class="headerlink" href="#checkfallenenemies-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">CheckFallenEnemies</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">CheckFallenEnemies</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numberEnemies</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
@@ -1875,7 +1747,7 @@
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Checks if any enemies have fallen below a certain Y-axis boundary and removes them if necessary.</li>

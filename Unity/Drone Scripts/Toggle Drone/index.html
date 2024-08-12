@@ -1360,12 +1360,10 @@
 </ul>
 <h2 id="toggledrone-class-explanation"><code>ToggleDrone</code> Class Explanation<a class="headerlink" href="#toggledrone-class-explanation" title="Permanent link">&para;</a></h2>
 <h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong><code>using System;</code></strong>: Provides basic data types and functionalities.</li>
@@ -1373,8 +1371,8 @@
 <li><strong><code>using UnityEngine;</code></strong>: Provides access to Unity-specific classes and methods.</li>
 </ul>
 <h3 id="class-definition">Class Definition<a class="headerlink" href="#class-definition" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ToggleDrone</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ToggleDrone</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>public</code></strong>: Makes the class accessible from other scripts and visible in Unity's Inspector.</li>
@@ -1391,20 +1389,7 @@
 <li><strong><code>Boolean isDrone = false;</code></strong>: A flag to determine whether drones are currently active or not.</li>
 </ul>
 <h3 id="update-method"><code>Update</code> Method<a class="headerlink" href="#update-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">isDrone</span><span class="p">)</span>
 <span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">GameObject</span><span class="w"> </span><span class="n">drone</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">Drones</span><span class="p">)</span>
@@ -1418,7 +1403,7 @@
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Continuously checks the state of drones and updates their positions to move them towards the user.</li>
@@ -1430,15 +1415,7 @@
 <li><strong><code>isDrone</code></strong>: Only checks and moves drones if <code>isDrone</code> is <code>true</code>.</li>
 </ul>
 <h3 id="ondrone-method"><code>OnDrone</code> Method<a class="headerlink" href="#ondrone-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OffDrone</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OffDrone</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">GameObject</span><span class="w"> </span><span class="n">drone</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">Drones</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span><span class="w"> </span>
@@ -1447,7 +1424,7 @@
 <span class="w">    </span><span class="n">Drones</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
 <span class="w">    </span><span class="n">isDrone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Deactivates all active drones and clears the <code>Drones</code> list.</li>
@@ -1459,16 +1436,12 @@
 <li><strong><code>isDrone</code></strong>: Sets the flag to <code>false</code> to indicate that drones are no longer active.</li>
 </ul>
 <h3 id="dronedestroy-method"><code>droneDestroy</code> Method<a class="headerlink" href="#dronedestroy-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">droneDestroy</span><span class="p">(</span><span class="n">GameObject</span><span class="w"> </span><span class="n">drone</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">droneDestroy</span><span class="p">(</span><span class="n">GameObject</span><span class="w"> </span><span class="n">drone</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">Destroy</span><span class="p">(</span><span class="n">Instantiate</span><span class="p">(</span><span class="n">explosion</span><span class="p">,</span><span class="w"> </span><span class="n">drone</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">Quaternion</span><span class="p">.</span><span class="n">identity</span><span class="p">),</span><span class="w"> </span><span class="m">2f</span><span class="p">);</span>
 <span class="w">    </span><span class="n">drone</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">forward</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.5f</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Handles the destruction of a specific drone, including triggering an explosion effect.</li>

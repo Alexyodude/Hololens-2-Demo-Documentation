@@ -1388,15 +1388,15 @@
 <h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
 <p>The <code>ChildCollisionHandler</code> script is used to detect collisions on child components of an enemy object and pass these collision events up to a parent handler object, specifically an <code>EnemyCollisionHandler</code>. This approach is common in game development where a complex object like an enemy has multiple collidable child components that need centralized handling.</p>
 <h3 id="namespace">Namespace<a class="headerlink" href="#namespace" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>UnityEngine</code></strong>: Provides classes and methods necessary for scripting in Unity, including components, game objects, and system events like collisions.</li>
 </ul>
 <h3 id="class-definition">Class Definition<a class="headerlink" href="#class-definition" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ChildCollisionHandler</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ChildCollisionHandler</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>public class ChildCollisionHandler</code></strong>: Declares a public class named <code>ChildCollisionHandler</code>.</li>
@@ -1408,29 +1408,18 @@
 </ul>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
 <h4 id="start-method"><code>Start</code> Method<a class="headerlink" href="#start-method" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">// Get the parent handler</span>
 <span class="w">    </span><span class="n">parentHandler</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetComponentInParent</span><span class="o">&lt;</span><span class="n">EnemyCollisionHandler</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Called before the first frame update, this method initializes the <code>parentHandler</code> by finding the <code>EnemyCollisionHandler</code> component on the parent GameObject. This setup ensures that any collision on the child is managed by a centralized handler on the parent.</li>
 </ul>
 <h4 id="oncollisionenter-method"><code>OnCollisionEnter</code> Method<a class="headerlink" href="#oncollisionenter-method" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">OnCollisionEnter</span><span class="p">(</span><span class="n">Collision</span><span class="w"> </span><span class="n">collision</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">OnCollisionEnter</span><span class="p">(</span><span class="n">Collision</span><span class="w"> </span><span class="n">collision</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">// Relay the collision to the parent handler</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">parentHandler</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
@@ -1438,7 +1427,7 @@
 <span class="w">        </span><span class="n">parentHandler</span><span class="p">.</span><span class="n">HandleChildCollision</span><span class="p">(</span><span class="n">collision</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Automatically called by Unity when the GameObject this script is attached to collides with another GameObject.</li>

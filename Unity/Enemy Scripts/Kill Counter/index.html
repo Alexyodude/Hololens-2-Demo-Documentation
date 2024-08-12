@@ -1348,18 +1348,17 @@
 </ul>
 <h2 id="killcounter-class-explanation"><code>KillCounter</code> Class Explanation<a class="headerlink" href="#killcounter-class-explanation" title="Permanent link">&para;</a></h2>
 <h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">TMPro</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong><code>using UnityEngine;</code></strong>: Imports the <code>UnityEngine</code> namespace, which provides access to Unity's core classes and functionalities.</li>
 <li><strong><code>using TMPro;</code></strong>: Imports the <code>TMPro</code> namespace, which is required for working with TextMeshPro, Unity's advanced text rendering system.</li>
 </ul>
 <h3 id="class-definition">Class Definition<a class="headerlink" href="#class-definition" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">KillCounter</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">KillCounter</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>public class KillCounter</code></strong>: Defines a class named <code>KillCounter</code>.</li>
@@ -1380,16 +1379,12 @@
 </li>
 </ul>
 <h3 id="start-method"><code>Start</code> Method<a class="headerlink" href="#start-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">// Find the Enemy script that manages the list</span>
 <span class="w">    </span><span class="n">enemyManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindObjectOfType</span><span class="o">&lt;</span><span class="n">ToggleEnemy</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li>
@@ -1403,16 +1398,12 @@
 </li>
 </ul>
 <h3 id="update-method"><code>Update</code> Method<a class="headerlink" href="#update-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">// Update the kill count text</span>
 <span class="w">    </span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">TextMeshProUGUI</span><span class="o">&gt;</span><span class="p">().</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">$&quot;Kills: {enemyManager.getKillCount}&quot;</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li>

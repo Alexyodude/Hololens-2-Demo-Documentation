@@ -1386,13 +1386,13 @@
 <p>The <code>Bullet</code> class automates the firing of projectiles in a periodic manner, managing both the instantiation of the projectiles and visual indicators. This setup is useful for game objects intended to act as turrets or guns, providing a consistent mechanism for shooting mechanics.</p>
 <h2 id="bullet-class-explanation"><code>Bullet</code> Class Explanation<a class="headerlink" href="#bullet-class-explanation" title="Permanent link">&para;</a></h2>
 <h3 id="namespace">Namespace<a class="headerlink" href="#namespace" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
+</code></pre></div>
 
 <p><strong><code>UnityEngine</code></strong>: Essential for accessing Unity-specific functionalities such as GameObject manipulation and component handling.</p>
 <h3 id="class-definition">Class Definition<a class="headerlink" href="#class-definition" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Bullet</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Bullet</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>public class Bullet</code></strong>: Declares a public class named <code>Bullet</code>.</li>
@@ -1408,31 +1408,17 @@
 </ul>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
 <h4 id="start-method"><code>Start</code> Method<a class="headerlink" href="#start-method" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">attached</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">Transform</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Initializes the <code>attached</code> variable by fetching the <code>Transform</code> component of the GameObject to which this script is attached. This setup is redundant since every GameObject inherently has a <code>Transform</code> component accessible through the <code>transform</code> property.</li>
 </ul>
 <h4 id="update-method"><code>Update</code> Method<a class="headerlink" href="#update-method" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
@@ -1444,22 +1430,18 @@
 <span class="w">        </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Called once per frame, this method increments the <code>count</code> and triggers <code>ShootProj()</code> every 20 frames, resetting the counter afterwards.</li>
 </ul>
 <h4 id="shootproj-method"><code>ShootProj</code> Method<a class="headerlink" href="#shootproj-method" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ShootProj</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ShootProj</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">Instantiate</span><span class="p">(</span><span class="n">ammo</span><span class="p">,</span><span class="w"> </span><span class="n">attached</span><span class="p">.</span><span class="n">position</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">attached</span><span class="p">.</span><span class="n">forward</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">0.1f</span><span class="p">,</span><span class="w"> </span><span class="n">attached</span><span class="p">.</span><span class="n">rotation</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Quaternion</span><span class="p">.</span><span class="n">Euler</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">90</span><span class="p">,</span><span class="w"> </span><span class="m">90</span><span class="p">)).</span><span class="n">velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attached</span><span class="p">.</span><span class="n">forward</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">100.0f</span><span class="p">;</span>
 <span class="w">    </span><span class="n">Instantiate</span><span class="p">(</span><span class="n">indicator</span><span class="p">,</span><span class="w"> </span><span class="n">attached</span><span class="p">.</span><span class="n">position</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">attached</span><span class="p">.</span><span class="n">forward</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">10f</span><span class="p">,</span><span class="w"> </span><span class="n">attached</span><span class="p">.</span><span class="n">rotation</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <p><strong>Functionality</strong>:</p>
 <ul>

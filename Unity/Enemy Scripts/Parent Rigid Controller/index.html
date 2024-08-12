@@ -1398,18 +1398,17 @@
 <p>The <code>ParentRigidController</code> class provides a centralized mechanism for managing the physics properties of all Rigidbody components attached to child objects of a GameObject. It simplifies physics management in Unity by allowing developers to uniformly apply settings such as gravity and kinematic states from a single parent object, making it ideal for managing complex assemblies or collective objects where consistent physics behavior is required.</p>
 <h2 id="parentrigidcontroller-class-explanation"><code>ParentRigidController</code> Class Explanation<a class="headerlink" href="#parentrigidcontroller-class-explanation" title="Permanent link">&para;</a></h2>
 <h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong><code>System</code></strong>: Used here to access fundamental CLR types like <code>Boolean</code>, though its direct utilities are not explicitly used in the script.</li>
 <li><strong><code>UnityEngine</code></strong>: Essential for accessing the MonoBehaviour base class and various components like Rigidbody that interact with the Unity Engine.</li>
 </ul>
 <h3 id="class-attributes">Class Attributes<a class="headerlink" href="#class-attributes" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">[RequireComponent(typeof(CharacterController))]</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="na">[RequireComponent(typeof(CharacterController))]</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>RequireComponent</code></strong>: Ensures that a <code>CharacterController</code> component is attached to the GameObject to which this script is attached. This enforces the presence of this component, which is crucial for the operations within the script.</li>
@@ -1422,18 +1421,7 @@
 </ul>
 <h3 id="methods-overview">Methods Overview<a class="headerlink" href="#methods-overview" title="Permanent link">&para;</a></h3>
 <h4 id="start-method"><code>Start</code> Method<a class="headerlink" href="#start-method" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetComponentsInChildren</span><span class="o">&lt;</span><span class="n">Rigidbody</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">Rigidbody</span><span class="w"> </span><span class="n">rb</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">body</span><span class="p">)</span>
@@ -1445,7 +1433,7 @@
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Initialization</strong>: Retrieves all Rigidbody components from child objects and applies specified physics settings to each, ensuring uniform behavior across all child components.</li>

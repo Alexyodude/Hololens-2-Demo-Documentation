@@ -1386,15 +1386,15 @@
 <p>The <code>DroneParentCollisionHandler</code> class provides a comprehensive mechanism for dealing with collisions both directly and indirectly (via child components) for drone objects in a game. It ensures that any significant collision results in appropriate actions, such as the destruction of the drone, centralizing collision handling logic in the parent component for easier maintenance and modification.</p>
 <h2 id="droneparentcollisionhandler-class-explanation"><code>DroneParentCollisionHandler</code> Class Explanation<a class="headerlink" href="#droneparentcollisionhandler-class-explanation" title="Permanent link">&para;</a></h2>
 <h3 id="namespace">Namespace<a class="headerlink" href="#namespace" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>UnityEngine</code></strong>: Provides classes and methods necessary for scripting in Unity, including components, game objects, and system events like collisions.</li>
 </ul>
 <h3 id="class-definition">Class Definition<a class="headerlink" href="#class-definition" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">DroneParentCollisionHandler</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">DroneParentCollisionHandler</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>public class DroneParentCollisionHandler</code></strong>: Declares a public class named <code>DroneParentCollisionHandler</code>.</li>
@@ -1406,31 +1406,19 @@
 </ul>
 <h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
 <h4 id="start-method"><code>Start</code> Method<a class="headerlink" href="#start-method" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">droneManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetComponentInParent</span><span class="o">&lt;</span><span class="n">ToggleDrone</span><span class="o">&gt;</span><span class="p">();</span>
 <span class="w">    </span><span class="c1">//droneManager.droneDestroy(gameObject);</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Initializes the <code>droneManager</code> by retrieving the <code>ToggleDrone</code> component from the parent GameObject. This setup assumes that the drone behavior is managed centrally by the <code>ToggleDrone</code> script.</li>
 <li><strong>Initialization</strong>: The commented line <code>droneManager.droneDestroy(gameObject);</code> suggests that there might be conditions under which the parent drone should be destroyed immediately upon initialization, but it is commented out to likely remain inactive until specific conditions are met.</li>
 </ul>
 <h4 id="handlechildcollision-method"><code>HandleChildCollision</code> Method<a class="headerlink" href="#handlechildcollision-method" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">HandleChildCollision</span><span class="p">(</span><span class="n">Collision</span><span class="w"> </span><span class="n">collision</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">HandleChildCollision</span><span class="p">(</span><span class="n">Collision</span><span class="w"> </span><span class="n">collision</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;DroneParent&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="c1">// Check if the collided object has the tag &quot;Enemy&quot; or &quot;Destroy&quot;</span>
@@ -1439,7 +1427,7 @@
 <span class="w">        </span><span class="n">droneManager</span><span class="p">.</span><span class="n">droneDestroy</span><span class="p">(</span><span class="n">gameObject</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: This method is called by child components (via <code>DroneChildCollisionHandler</code>). It processes collisions involving child components by determining if any action should be taken, such as destroying the drone.</li>
@@ -1450,15 +1438,7 @@
 </li>
 </ul>
 <h4 id="oncollisionenter-method"><code>OnCollisionEnter</code> Method<a class="headerlink" href="#oncollisionenter-method" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnCollisionEnter</span><span class="p">(</span><span class="n">Collision</span><span class="w"> </span><span class="n">collision</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnCollisionEnter</span><span class="p">(</span><span class="n">Collision</span><span class="w"> </span><span class="n">collision</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;DroneParentBox&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="c1">// Check if the collided object has the tag &quot;Enemy&quot;</span>
@@ -1467,7 +1447,7 @@
 <span class="w">        </span><span class="n">droneManager</span><span class="p">.</span><span class="n">droneDestroy</span><span class="p">(</span><span class="n">gameObject</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong>Purpose</strong>: Directly handles collisions encountered by the parent drone itself, not just those relayed by children.</li>

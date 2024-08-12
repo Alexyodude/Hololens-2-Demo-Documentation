@@ -1347,8 +1347,8 @@
 <li><strong><code>using UnityEngine;</code></strong>: Provides access to Unity's core classes and functionalities, enabling the script to interact with GameObjects and manage their lifecycle.</li>
 </ul>
 <h3 id="class-definition">Class Definition<a class="headerlink" href="#class-definition" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ToggleGun</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ToggleGun</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>public class ToggleGun</code></strong>: Defines a class named <code>ToggleGun</code>.</li>
@@ -1360,14 +1360,11 @@
 <li><strong><code>private GameObject Gun;</code></strong>: A private variable to hold a reference to the instantiated gun object. This allows the script to keep track of the gun instance for later manipulation or destruction.</li>
 </ul>
 <h3 id="ongun-method"><code>OnGun</code> Method<a class="headerlink" href="#ongun-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnGun</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnGun</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">Gun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Instantiate</span><span class="p">(</span><span class="n">GunPrefab</span><span class="p">,</span><span class="w"> </span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">,</span><span class="w"> </span><span class="n">Quaternion</span><span class="p">.</span><span class="n">identity</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li>
@@ -1387,14 +1384,11 @@
 </li>
 </ul>
 <h3 id="offgun-method"><code>OffGun</code> Method<a class="headerlink" href="#offgun-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OffGun</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OffGun</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">Destroy</span><span class="p">(</span><span class="n">Gun</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li>

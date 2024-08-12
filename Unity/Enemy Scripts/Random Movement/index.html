@@ -1542,18 +1542,17 @@
 <p>The <code>RandomMovement</code> class provides a comprehensive suite of functionalities for handling character movement, camera control, and interactions within a game environment. It is well-suited for projects requiring detailed control over character dynamics and interactions with a game world, particularly in combination with advanced camera systems like Cinemachine.</p>
 <h2 id="randommovement-class-explanation"><code>RandomMovement</code> Class Explanation<a class="headerlink" href="#randommovement-class-explanation" title="Permanent link">&para;</a></h2>
 <h3 id="namespaces">Namespaces<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong><code>System</code></strong>: Includes fundamental classes and base types.</li>
 <li><strong><code>UnityEngine</code></strong>: Provides classes and methods for interacting with the Unity Engine and its components.</li>
 </ul>
 <h3 id="class-attributes">Class Attributes<a class="headerlink" href="#class-attributes" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="na">[RequireComponent(typeof(CharacterController))]</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="na">[RequireComponent(typeof(CharacterController))]</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>RequireComponent</code></strong>: Ensures that a <code>CharacterController</code> component is attached to the GameObject to which this script is also attached.</li>
@@ -1583,14 +1582,7 @@
 <p>Updates camera rotation after all other updates are processed, ensuring the camera's movements are smooth and follow the character accurately.</p>
 <h3 id="specific-functionalities">Specific Functionalities<a class="headerlink" href="#specific-functionalities" title="Permanent link">&para;</a></h3>
 <h4 id="ground-check">Ground Check<a class="headerlink" href="#ground-check" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">GroundedCheck</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">GroundedCheck</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="n">Vector3</span><span class="w"> </span><span class="n">spherePosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vector3</span><span class="p">(</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">GroundedOffset</span><span class="p">,</span><span class="w"> </span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="p">);</span>
 <span class="w">    </span><span class="n">Grounded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Physics</span><span class="p">.</span><span class="n">CheckSphere</span><span class="p">(</span><span class="n">spherePosition</span><span class="p">,</span><span class="w"> </span><span class="n">GroundedRadius</span><span class="p">,</span><span class="w"> </span><span class="n">GroundLayers</span><span class="p">,</span><span class="w"> </span><span class="n">QueryTriggerInteraction</span><span class="p">.</span><span class="n">Ignore</span><span class="p">);</span>
@@ -1598,7 +1590,7 @@
 <span class="w">        </span><span class="n">_animator</span><span class="p">.</span><span class="n">SetBool</span><span class="p">(</span><span class="n">_animIDGrounded</span><span class="p">,</span><span class="w"> </span><span class="n">Grounded</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <p>Checks if the character is grounded by using a sphere check at the character's feet. This method updates the <code>Grounded</code> boolean and, if an animator is available, updates the corresponding animation state.</p>
 <h4 id="movement-and-jumping-logic">Movement and Jumping Logic<a class="headerlink" href="#movement-and-jumping-logic" title="Permanent link">&para;</a></h4>

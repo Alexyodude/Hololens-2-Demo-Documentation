@@ -1365,8 +1365,8 @@
 <li><strong><code>using Microsoft.MixedReality.Toolkit.SpatialAwareness;</code></strong>: Provides access to Mixed Reality Toolkit (MRTK) spatial awareness functionalities, specifically for handling spatial meshes.</li>
 </ul>
 <h3 id="class-definition">Class Definition<a class="headerlink" href="#class-definition" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ToggleMesh</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ToggleMesh</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>public class ToggleMesh</code></strong>: Defines a class named <code>ToggleMesh</code>.</li>
@@ -1377,17 +1377,7 @@
 <li><strong><code>private IMixedRealitySpatialAwarenessMeshObserver observer;</code></strong>: A private variable of type <code>IMixedRealitySpatialAwarenessMeshObserver</code> that will hold the reference to the mesh observer. This observer is responsible for managing spatial meshes in the Mixed Reality environment.</li>
 </ul>
 <h3 id="start-method"><code>Start</code> Method<a class="headerlink" href="#start-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">// Use CoreServices to quickly get access to the IMixedRealitySpatialAwarenessSystem</span>
 <span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">spatialAwarenessService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Microsoft</span><span class="p">.</span><span class="n">MixedReality</span><span class="p">.</span><span class="n">Toolkit</span><span class="p">.</span><span class="n">CoreServices</span><span class="p">.</span><span class="n">SpatialAwarenessSystem</span><span class="p">;</span>
@@ -1398,7 +1388,7 @@
 <span class="w">    </span><span class="c1">// Get the specific mesh observer by name</span>
 <span class="w">    </span><span class="n">observer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataProviderAccess</span><span class="p">.</span><span class="n">GetDataProvider</span><span class="o">&lt;</span><span class="n">IMixedRealitySpatialAwarenessMeshObserver</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;OpenXR Spatial Mesh Observer&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li>
@@ -1419,16 +1409,7 @@
 </li>
 </ul>
 <h3 id="meshon-method"><code>MeshOn</code> Method<a class="headerlink" href="#meshon-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MeshOn</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MeshOn</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">observer</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
@@ -1438,7 +1419,7 @@
 <span class="cm">           Debug.Log(observer.Name);*/</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li>
@@ -1459,16 +1440,7 @@
 </li>
 </ul>
 <h3 id="meshoff-method"><code>MeshOff</code> Method<a class="headerlink" href="#meshoff-method" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MeshOff</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">MeshOff</span><span class="p">()</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">observer</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">null</span><span class="p">)</span>
 <span class="w">    </span><span class="p">{</span>
@@ -1478,7 +1450,7 @@
 <span class="cm">           Debug.Log(observer.Name);*/</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li>

@@ -1302,18 +1302,17 @@
 <p>The <code>EnemyState</code> class serves as a minimalistic approach to managing the life status of enemies in a game. By toggling the <code>isAlive</code> property, other scripts can check this status to make decisions or trigger events, such as disabling enemy AI, playing a death animation, or removing the enemy from the game. This class acts as a flag for the enemy's state without implementing detailed logic itself.</p>
 <h2 id="enemystate-class-explanation"><code>EnemyState</code> Class Explanation<a class="headerlink" href="#enemystate-class-explanation" title="Permanent link">&para;</a></h2>
 <h3 id="namespace">Namespace<a class="headerlink" href="#namespace" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">UnityEngine</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 
 <ul>
 <li><strong><code>System</code></strong>: Used for fundamental system operations. In this context, it primarily supports basic data types like <code>Boolean</code>.</li>
 <li><strong><code>UnityEngine</code></strong>: Essential for accessing Unity-specific functionalities, enabling the script to be attached to GameObjects and manipulated within the Unity Editor.</li>
 </ul>
 <h3 id="class-definition">Class Definition<a class="headerlink" href="#class-definition" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">EnemyState</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
-</code></pre></div></td></tr></table></div>
+<div class="codehilite"><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">EnemyState</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
+</code></pre></div>
 
 <ul>
 <li><strong><code>public class EnemyState</code></strong>: Declares a public class named <code>EnemyState</code>.</li>
