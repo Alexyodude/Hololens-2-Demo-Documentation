@@ -1241,45 +1241,39 @@
 </ul>
 <h3 id="version-01">Version 0.1<a class="headerlink" href="#version-01" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="../Images/Pasted image 20240807150758.png" />
- - UI with toggle and press buttons:</p>
-<div class="codehilite"><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>- - [Create Box](../UI/Create Box)
-- - [Toggle Enemy](../Enemy Scripts/Toggle Enemy)
-- - [Toggle Drone](../Drone Scripts/Toggle Drone)
-- - [Toggle Pistol](../Pistol/Toggle Pistol)
-- - [Toggle Mesh](../UI/Toggle Mesh)
-</code></pre></div></td></tr></table></div>
-
+ - UI with toggle and press buttons:
+    - - <a href="../UI/Create Box">Create Box</a>
+    - - <a href="../Enemy Scripts/Toggle Enemy">Toggle Enemy</a>
+    - - <a href="../Drone Scripts/Toggle Drone">Toggle Drone</a>
+    - - <a href="../Pistol/Toggle Pistol">Toggle Pistol</a>
+    - - <a href="../UI/Toggle Mesh">Toggle Mesh</a></p>
 <ul>
 <li>Box creation and destruction based on set boundary</li>
 <li>Enemies and drones are set before as public variables so it is constant</li>
 <li>Enemies spawn randomly on meshes with a normal vector roughly pointing up</li>
 <li>
 <p>Enemies move in straight lines unless it collides with a mesh (<a href="../Enemy Scripts/Random Movement">Random Movement</a>)</p>
-</li>
-<li>
-<p>Colliding results in a random direction to be selected</p>
-</li>
+<ul>
+<li>Colliding results in a random direction to be selected</li>
 <li>Enemies respawn if they leave the set boundary</li>
-<li>
-<p>Custom tag "Enemy" selected to differentiate object when collision is detected with another object</p>
+<li>Custom tag "Enemy" selected to differentiate object when collision is detected with another object</li>
+</ul>
 </li>
 <li>
 <p>Drones move towards the user's ray pointer</p>
+<ul>
+<li>Separation between the drones are provided by <a href="../Drone Scripts/Drone Boid">Drone Boid</a> script</li>
+<li>Custom tag "Destroy" selected to differentiate object when collision is detected with another object</li>
+</ul>
 </li>
 <li>
-<p>Separation between the drones are provided by <a href="../Drone Scripts/Drone Boid">Drone Boid</a> script</p>
+<p>Mesh visibility changes between visible and <a href="../Occlusion">Occlusion</a></p>
 </li>
-<li>Custom tag "Destroy" selected to differentiate object when collision is detected with another object</li>
-<li>Mesh visibility changes between visible and <a href="../Occlusion">Occlusion</a></li>
 <li>
 <p>The pistol's relative position and orientation is used to instantiate the bullet</p>
-</li>
-<li>
-<p>Bullet has custom tag "Destroy" selected for enemy and weapon collision logic</p>
+<ul>
+<li>Bullet has custom tag "Destroy" selected for enemy and weapon collision logic</li>
+</ul>
 </li>
 </ul>
 
