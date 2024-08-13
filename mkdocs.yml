@@ -1,23 +1,57 @@
 docs_dir: docs
+extra_css:
+- stylesheets/extra.css
+markdown_extensions:
+- pymdownx.tasklist:
+    custom_checkbox: true
+- codehilite:
+    preserve_tabs: true
+- admonition
+- toc:
+    permalink: true
+- tables
 nav:
-- Index: index.md
+- Home: index.md
 - Unity:
-  - Application Description: Unity/Application Description.md
+  - Component: Unity/Component.md
+  - Empty Object: Unity/Empty Object.md
+  - Gameobject: Unity/GameObject.md
+  - Occlusion: Unity/Occlusion.md
   - Prefab: Unity/Prefab.md
-  - Scripts: Unity/Scripts.md
+  - Script: Unity/Script.md
   - Setting Up The Enviorment: Unity/Setting Up the Enviorment.md
-- Enemy Component Scripts:
-  - Animator: Unity/Enemy Component Scripts/Animator.md
-  - Character Controller: Unity/Enemy Component Scripts/Character Controller.md
-  - Enemy Collision Handler: Unity/Enemy Component Scripts/Enemy Collision Handler.md
-  - Enemy State: Unity/Enemy Component Scripts/Enemy State.md
-  - Parent Rigid Controller: Unity/Enemy Component Scripts/Parent Rigid Controller.md
-  - Random Movement: Unity/Enemy Component Scripts/Random Movement.md
+  - Version: Unity/Version.md
+- Drone Scripts:
+  - Drone Boid: Unity/Drone Scripts/Drone Boid.md
+  - Drone Child Collision Handler: Unity/Drone Scripts/Drone Child Collision Handler.md
+  - Drone Parent Collision Handler: Unity/Drone Scripts/Drone Parent Collision Handler.md
+  - Toggle Drone: Unity/Drone Scripts/Toggle Drone.md
+- Enemy Scripts:
+  - Child Collision Handler: Unity/Enemy Scripts/Child Collision Handler.md
+  - Enemy Collision Handler: Unity/Enemy Scripts/Enemy Collision Handler.md
+  - Enemy State: Unity/Enemy Scripts/Enemy State.md
+  - Kill Counter: Unity/Enemy Scripts/Kill Counter.md
+  - Parent Rigid Controller: Unity/Enemy Scripts/Parent Rigid Controller.md
+  - Random Movement: Unity/Enemy Scripts/Random Movement.md
+  - Toggle Enemy: Unity/Enemy Scripts/Toggle Enemy.md
+- Imported Components:
+  - Animator: Unity/Imported Components/Animator.md
+  - Character Controller: Unity/Imported Components/Character Controller.md
+  - Radial View: Unity/Imported Components/Radial View.md
+  - Solver Handler: Unity/Imported Components/Solver Handler.md
+- Misc Scripts:
+  - Destroy: Unity/Misc Scripts/Destroy.md
+- Pistol:
+  - Bullet: Unity/Pistol/Bullet.md
+  - Toggle Pistol: Unity/Pistol/Toggle Pistol.md
 - Ui:
-  - Toggle Drone: Unity/UI/Toggle Drone.md
-  - Toggle Enemy: Unity/UI/Toggle Enemy.md
+  - Create Box: Unity/UI/Create Box.md
+  - Create Grenade: Unity/UI/Create Grenade.md
+  - Empty Object Named Scripts: Unity/UI/Empty Object Named Scripts.md
+  - Mesh Saver: Unity/UI/Mesh Saver.md
+  - Pin Button: Unity/UI/Pin Button.md
   - Toggle Mesh: Unity/UI/Toggle Mesh.md
-  - Toggle Pistol: Unity/UI/Toggle Pistol.md
+  - Ui: Unity/UI/UI.md
 site_name: Hololens 2 Demo Documentation
 theme:
   name: material

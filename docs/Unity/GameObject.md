@@ -1,0 +1,1 @@
+A GameObject the most basic ways to describe objects in the scene. Every object in the scene is a GameObject so it is the most encompassing category.

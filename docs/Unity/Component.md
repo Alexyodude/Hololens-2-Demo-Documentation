@@ -1,0 +1,1 @@
+A component is something that is attached to the a object. A [Script](../Script) is a type of component.

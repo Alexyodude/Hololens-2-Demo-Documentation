@@ -1,0 +1,1 @@
+An empty object contains no mesh of any sort and is primarily used for organisational purpose such as being a parent of some hierarchy.  

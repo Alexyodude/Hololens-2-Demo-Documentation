@@ -13,18 +13,24 @@ def generate_nav(docs_dir, base_url=''):
         if not relative_root:
             for file in files:
                 if file.endswith('.md'):
+                    if file == 'index.md':
+                        title = 'Home'
+                    else:
+                        title = os.path.splitext(file)[0].replace('_', ' ').title()
                     nav.append({
-                        os.path.splitext(file)[0].replace('_', ' ').title(): 
-                        os.path.join(base_url, file).replace(os.sep, '/')
+                        title: os.path.join(base_url, file).replace(os.sep, '/')
                     })
         else:
             section_name = os.path.basename(relative_root)
             section_nav = []
             for file in files:
                 if file.endswith('.md'):
+                    if file == 'index.md':
+                        title = section_name.title()
+                    else:
+                        title = file.replace('.md', '').replace('_', ' ').title()
                     section_nav.append({
-                        file.replace('.md', '').replace('_', ' ').title(): 
-                        os.path.join(relative_root, file).replace(os.sep, '/')
+                        title: os.path.join(relative_root, file).replace(os.sep, '/')
                     })
             if section_nav:
                 nav.append({section_name.title(): section_nav})

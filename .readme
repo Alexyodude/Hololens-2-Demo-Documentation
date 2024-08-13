@@ -2,6 +2,6 @@
 1.python generate_nav_yml.py
 2.Delete stuff inside docs
 3.python convert_links.py
-4.Delete site
+4.Delete site folder
 5.mkdocs gh-deploy
 

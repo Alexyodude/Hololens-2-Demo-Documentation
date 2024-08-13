@@ -1,0 +1,5 @@
+code, pre {
+    font-family: monospace;
+    white-space: pre-wrap; /* Ensures that lines wrap if they are too long */
+    tab-size: 4; /* Ensures that tabs are rendered with the correct width */
+}

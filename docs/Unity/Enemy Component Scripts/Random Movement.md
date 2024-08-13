@@ -1,1 +1,0 @@
-This script is used to move the enemy around in random directions and change direction when it detects a collision with a wall.

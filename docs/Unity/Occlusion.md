@@ -1,0 +1,1 @@
+Occlusion is a display setting that sets meshes to be invisible yet still provide a physical collision with other objects.

@@ -1,0 +1,1 @@
+The object is used to determine the state of the pin. The state controls whether the [UI](../UI) is pinned or unpinned in space. Having the [UI](../UI) pinned results in the [UI](../UI) to stop following the user while unpinned follows the user.
