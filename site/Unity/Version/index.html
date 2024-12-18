@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../Setting%20Up%20the%20Enviorment/">
+        <link rel="prev" href="../Setting%20Up%20the%20Environment/">
       
       
         <link rel="next" href="../Drone%20Scripts/Drone%20Boid/">
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#possible-ideas-to-improve" class="md-skip">
+        <a href="#version-01" class="md-skip">
           Skip to content
         </a>
       
@@ -201,7 +201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../Index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -258,6 +258,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../Arduino/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arduino
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Component/" class="md-nav__link">
         
   
@@ -305,6 +326,27 @@
   
   <span class="md-ellipsis">
     Gameobject
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Improvements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Improvements
   </span>
   
 
@@ -384,11 +426,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Setting%20Up%20the%20Enviorment/" class="md-nav__link">
+      <a href="../Setting%20Up%20the%20Environment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Setting Up The Enviorment
+    Setting Up The Environment
   </span>
   
 
@@ -445,15 +487,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#possible-ideas-to-improve" class="md-nav__link">
-    <span class="md-ellipsis">
-      Possible Ideas to Improve
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#version-01" class="md-nav__link">
@@ -1282,15 +1315,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#possible-ideas-to-improve" class="md-nav__link">
-    <span class="md-ellipsis">
-      Possible Ideas to Improve
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#version-01" class="md-nav__link">
     <span class="md-ellipsis">
       Version 0.1
@@ -1316,15 +1340,8 @@
 
   <h1>Version</h1>
 
-<h3 id="possible-ideas-to-improve">Possible Ideas to Improve<a class="headerlink" href="#possible-ideas-to-improve" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Upgrade <a href="../Enemy Scripts/Random Movement">Random Movement</a> script to a neural ai script that navigates the world intelligently</li>
-<li>Upgrade <a href="../Drone Scripts/Drone Boid">Drone Boid</a> script to an ai script that targets enemies better and follows the user input smoothly</li>
-<li>Include a minimap for the user, which conveys key information about the surrounding environment in a clear and simple format</li>
-<li>Physical external input from a device such as a model gun to improve experience and immersion</li>
-</ul>
 <h3 id="version-01">Version 0.1<a class="headerlink" href="#version-01" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="../Images/Pasted image 20240807150758.png" />  </p>
+<p><img alt="" src="../../Images/Pasted image 20240807150758.png" />  </p>
 <ul>
 <li>
 <p>UI with toggle and press buttons:</p>
@@ -1341,6 +1358,7 @@
 </li>
 <li>Enemies and drones are set before as public variables so it is constant</li>
 <li>Enemies spawn randomly on meshes with a normal vector roughly pointing up</li>
+<li>Enemy prefab humanoid asset provide a human target</li>
 <li>
 <p>Enemies move in straight lines unless it collides with a mesh (<a href="../Enemy Scripts/Random Movement">Random Movement</a>)</p>
 <ul>
@@ -1348,6 +1366,9 @@
 <li>Enemies respawn if they leave the set boundary</li>
 <li>Custom tag "Enemy" selected to differentiate object when collision is detected with another object</li>
 </ul>
+</li>
+<li>
+<p>Drone prefab asset provides more intuitive response for the user</p>
 </li>
 <li>
 <p>Drones move towards the user's ray pointer</p>
@@ -1366,6 +1387,7 @@
 </ul>
 </li>
 </ul>
+<p>Ideas to improve are listed here, "<a href="../Improvements">Improvements</a>".</p>
 
 
 

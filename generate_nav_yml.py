@@ -13,7 +13,7 @@ def generate_nav(docs_dir, base_url=''):
         if not relative_root:
             for file in files:
                 if file.endswith('.md'):
-                    if file == 'index.md':
+                    if file == 'Index.md':
                         title = 'Home'
                     else:
                         title = os.path.splitext(file)[0].replace('_', ' ').title()
@@ -25,7 +25,7 @@ def generate_nav(docs_dir, base_url=''):
             section_nav = []
             for file in files:
                 if file.endswith('.md'):
-                    if file == 'index.md':
+                    if file == 'ndex.md':
                         title = section_name.title()
                     else:
                         title = file.replace('.md', '').replace('_', ' ').title()

@@ -11,15 +11,17 @@ markdown_extensions:
     permalink: true
 - tables
 nav:
-- Home: index.md
+- Home: Index.md
 - Unity:
+  - Arduino: Unity/Arduino.md
   - Component: Unity/Component.md
   - Empty Object: Unity/Empty Object.md
   - Gameobject: Unity/GameObject.md
+  - Improvements: Unity/Improvements.md
   - Occlusion: Unity/Occlusion.md
   - Prefab: Unity/Prefab.md
   - Script: Unity/Script.md
-  - Setting Up The Enviorment: Unity/Setting Up the Enviorment.md
+  - Setting Up The Environment: Unity/Setting Up the Environment.md
   - Version: Unity/Version.md
 - Drone Scripts:
   - Drone Boid: Unity/Drone Scripts/Drone Boid.md

@@ -1,6 +1,6 @@
 The setting used for the enemy is shown in this screenshot.
 
-![](../../Images/Pasted image 20240812133521.png)
+![](../../../Images/Pasted image 20240812133521.png)
 
 The character layer is excluded to avoid the enemies objects from self interacting.
 

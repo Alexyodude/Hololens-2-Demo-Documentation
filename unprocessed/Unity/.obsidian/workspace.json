@@ -11,9 +11,12 @@
             "id": "9c4d31d172f47a62",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Images/Setup/Pasted image 20240813093133.png"
+                "file": "Misc Scripts/Destroy.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -83,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Setup/Pasted image 20240813093133.png",
+                "file": "Misc Scripts/Destroy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Setup/Pasted image 20240813093133.png",
+                "file": "Misc Scripts/Destroy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Images/Setup/Pasted image 20240813093133.png"
+                "file": "Misc Scripts/Destroy.md"
               }
             }
           }
@@ -146,19 +149,21 @@
   },
   "active": "9c4d31d172f47a62",
   "lastOpenFiles": [
+    "Images/Pasted image 20240813150740.png",
+    "Images/Pasted image 20240813150704.png",
+    "Images/Pasted image 20240813150801.png",
+    "Images/Pasted image 20240813145546.png",
+    "Setting Up the Environment.md",
+    "Imported Components/Character Controller.md",
+    "Images/Setup/Pasted image 20240813093133.png",
     "Images/Setup/Pasted image 20240813093557.png",
     "Images/Setup/Pasted image 20240813093713.png",
     "Images/Setup/Pasted image 20240813093656.png",
     "Images/Setup/Pasted image 20240813093651.png",
     "Images/Setup/Pasted image 20240813094104.png",
-    "Images/Setup/Pasted image 20240813093133.png",
     "Images/Setup/Pasted image 20240813092828.png",
     "Imported Components/Solver Handler.md",
-    "Images/Setup/Pasted image 20240813092946.png",
-    "Images/Setup/Pasted image 20240813093115.png",
-    "Images/Setup/Pasted image 20240813094459.png",
     "Images/Setup",
-    "Images/Setup/Pasted image 20240813094451.png",
     "Setting Up the Enviorment.md",
     "Empty Object.md",
     "Script.md",
@@ -166,7 +171,6 @@
     "UI/UI.md",
     "UI/Toggle Mesh.md",
     "Imported Components/Animator.md",
-    "Imported Components/Character Controller.md",
     "Imported Components/Radial View.md",
     "Enemy Scripts/Child Collision Handler.md",
     "Enemy Scripts/Enemy Collision Handler.md",
@@ -183,7 +187,6 @@
     "UI/Create Grenade.md",
     "Enemy Scripts/Random Movement.md",
     "Drone Scripts/Drone Child Collision Handler.md",
-    "Pistol/Toggle Pistol.md",
     "Pistol",
     "Drone Scripts",
     "Enemy Scripts",

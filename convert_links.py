@@ -35,9 +35,9 @@ def convert_obisidian_links_to_mkdocs(file_path, docs_dir):
     content = link_pattern.sub(link_replacement, content)
     content = image_pattern.sub(image_replacement, content)
 
-    # Add "-" for indentation, converting it to a Markdown list
-    indented_line_pattern = re.compile(r'^(\t+)(.*)', re.MULTILINE)
-    content = indented_line_pattern.sub(lambda m: f"{m.group(1).replace('\t', '    ')}- {m.group(2)}", content)
+    # # Add "-" for indentation, converting it to a Markdown list
+    # indented_line_pattern = re.compile(r'^(\t+)(.*)', re.MULTILINE)
+    # content = indented_line_pattern.sub(lambda m: f"{m.group(1).replace('\t', '    ')}- {m.group(2)}", content)
     
     return content
 
